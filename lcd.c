@@ -5,6 +5,17 @@ sbit RS=P1^0;
 sbit RW=P1^1;
 sbit EN=P1^2;
 int n;
+void init_lcd();
+void cmd_lcd(unsigned char);
+void data_lcd(unsigned char);
+void write_lcd(unsigned char);
+
+main()
+{
+	lcd_init();
+	lcd_data('V');
+	delay_ms(100);\
+}
 
 
 void init_lcd()
